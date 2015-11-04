@@ -1,6 +1,6 @@
 #!/bin/bash
 delay=30
-warn_days=1
+warn_days=5
 sleep $(($delay))
 IFS=$'\n' pids=($(syslog -T sec -F '$PID' -k Message 'Backup completed successfully.'))
 IFS=$'\n' timestamps=($(syslog -T sec -F '$Time' -k Message 'Backup completed successfully.'))
